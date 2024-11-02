@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js for the pie chart -->
+</head>
+<body>
+    <div class="dashboard-container">
+
+        <div class="left-section">
+            <!-- Expense Form -->
+            <h2>Personal Expense Tracker</h2>
+            <form id="expense-form">
+                <input type="text" id="expense-name" placeholder="Expense Name" required>
+                <input type="number" id="expense-amount" placeholder="Amount (₹)" required>
+                <select id="expense-category">
+                    <option value="" disabled selected>Select Category</option>
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Bills">Bills</option>
+                    <option value="Other">Other</option>
+                </select>
+                <button type="button" id="add-expense-btn">Add Expense</button>
+            </form>
+
+            <!-- Expense List -->
+            <ul id="expense-list"></ul>
+
+            <!-- Total Expense -->
+            <div id="total-expense">
+                <h3>Total Spent: ₹<span id="total-amount">0</span></h3>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <!-- Pie Chart -->
+            <canvas id="myPieChart"></canvas>
+        </div>
+    </div>
+
+    <script src="app.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
